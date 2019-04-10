@@ -1,0 +1,63 @@
+
+<div class="row">
+    <div class="col-md-12">
+        {{ID:alert}}
+        <form class="form-horizontal" role="form" method="post" action="admin.php?id={{ID:id}}">
+            <div class="form-group">
+                <label class="col-sm-2 control-label"></label>
+                <div class="col-sm-5">
+                    <h3>{{ST:edit_admin}}</h3>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">{{ST:name}}</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="name" placeholder="{{ST:name}}" name="name" value="{{ID:name}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">{{ST:email}}</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control" id="email" placeholder="{{ST:email}}" name="email" value="{{ID:email}}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="1" name="can_manage_survey" {{ID:can_manage_survey_state}}/> {{ST:can_manage_surveys}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="1" name="can_manage_admins"  {{ID:can_manage_admins_state}}/> {{ST:can_manage_admins}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="1" name="deny_access"  {{ID:deny_access_state}}/> {{ST:deny_access}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-info" name="submit" value="1">{{ST:save}}</button> <button onclick="return confirm('{{ST:are_you_sure}}');"  type="submit" class="btn btn-danger" name="delete" value="1">{{ST:delete}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

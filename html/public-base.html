@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ID:title}} -{{ST:app_name}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="An app for your survey needs.">
+        <meta name="author" content="Yoan Bachev">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1><a href="signin.php">{{ST:app_name}}</a></h1>
+            <p>{{ST:app_desc}}</p>
+            <hr>
+            {{ID:content}}
+
+            <hr>
+            <footer>
+                <p>&copy; {{ST:site_name}} {{ID:current_year}}</p>
+            </footer>
+        </div> <!-- /container -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.placeholder.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

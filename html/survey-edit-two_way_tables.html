@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-8">
+        {{ID:alert_2way}}
+        <form class="form-horizontal" method="post" action="surveys.php?id={{ID:id}}&active_tab=two_way_tables">
+            <div class="form-group">
+                <label for="sample_size" class="col-sm-4 control-label">{{ST:sample_size}}</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="sample_size" name="sample_size" value="{{ID:sample_size}}">
+                    <span class="help-block">{{ST:sample_size_explanation}}</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rows" class="col-sm-4 control-label">{{ST:rows}}</label>
+                <div class="col-sm-8">
+                    <select class="form-control" name="rows" id="rows">
+                        <option value="">{{ST:select_one}}</option>
+                        {{ID:two_way_rows_select}}
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="columns" class="col-sm-4 control-label">{{ST:columns}}</label>
+                <div class="col-sm-8">
+                    <select class="form-control" name="columns" id="columns">
+                        <option value="">{{ST:select_one}}</option>
+                        {{ID:two_way_columns_select}}
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-8">
+                    <button type="submit" class="btn btn-info" name="submit_2way" value="1">{{ST:generate_table}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        {{ID:two_way_table}}
+    </div>
+</div>

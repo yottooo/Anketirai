@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-4">
+        {{ID:alert}}
+        <form method="post" action="admins.php">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{ST:name}}" name="name" value="{{ID:name}}">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="{{ST:email}}" name="email" value="{{ID:email}}">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="{{ST:password}}" name="password">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="{{ST:repeat_password}}" name="cpassword">
+            </div>
+
+            <br/>
+            {{ST:permissions}}:<br/> <input type="checkbox" value="1" name="can_manage_survey" {{ID:can_manage_survey_state}}/> {{ST:can_manage_surveys}} <input type="checkbox" value="1" name="can_manage_admins"  {{ID:can_manage_admins_state}}/> {{ST:can_manage_admins}} <br/>
+            <br/>
+            <input type="checkbox" value="1" name="email_password" {{ID:email_password_state}}/> {{ST:email_password_to_the_user}}<br/><br/>
+            <button type="submit" class="btn btn-info" name="submit" value="1">{{ST:add_administrator}}</button>
+            <button class="btn btn-default" type="reset">{{ST:reset}}</button>
+        </form>
+    </div>
+
+    <div class="col-md-8">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>{{ST:email}}</th>
+                <th>{{ST:name}}</th>
+                <th>{{ST:permissions}}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{ID:rows}}
+            </tbody>
+        </table>
+        <center>{{ID:pagination}}</center>
+    </div>
+</div>
